@@ -48,7 +48,7 @@ superpowerDeadpool.Add(regeneration);
 
 deadpool.SuperPowers =  superpowerDeadpool;
 
-System.Console.WriteLine(superman.UseSuperPowers() + deadpool.BadAction("matar al villano de turno"));
+System.Console.WriteLine(superman.UseSuperPowers() + deadpool.BadAction("matar al villano de turno\n\b") + superman.SaveTheEarth());
 
 enum PowerLevel
 {

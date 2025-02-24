@@ -2,11 +2,11 @@ using System.Text;
 
 namespace SuperHeroesApp.Models
 {
-    class SuperHero
+    class SuperHero : Hero
     {
         private string _Name;
         public Guid Id;
-        public string? Name
+        public override string? Name
         {
             get
             {
@@ -47,5 +47,12 @@ namespace SuperHeroesApp.Models
             }
             return sb.ToString();
         }
+
+        //Implementar un metodo de una clase abstracta
+        public override string SaveTheWorld()
+        {
+            return $@"{Id} {Name}";
+        }
+
     }
 }
