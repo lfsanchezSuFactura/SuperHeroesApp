@@ -12,6 +12,12 @@ superStreng.Name = "Super Streng";
 superStreng.Description = "";
 superStreng.Level = PowerLevel.LevelThree;
 
+var regeneration = new SuperPower();
+regeneration.Name = "Regeneration";
+regeneration.Description = "";
+regeneration.Level = PowerLevel.LevelOne;
+
+//Super Héroe
 
 var superman = new SuperHero();
 
@@ -27,7 +33,22 @@ superpowerSuperman.Add(canFly);
 
 superman.SuperPowers =  superpowerSuperman;
 
-System.Console.WriteLine(superman.UseSuperPowers());
+//Anti-héroe
+
+var deadpool = new AntiHero();
+
+deadpool.Id = Guid.NewGuid();
+deadpool.Name = "Deadpool       ";
+deadpool.SecretIdentity = "Wade Winston Wilson";
+deadpool.Organization = "X-Force";
+deadpool.CanFly = false;
+
+List<SuperPower> superpowerDeadpool = new List<SuperPower>();
+superpowerDeadpool.Add(regeneration);
+
+deadpool.SuperPowers =  superpowerDeadpool;
+
+System.Console.WriteLine(superman.UseSuperPowers() + deadpool.BadAction("matar al villano de turno"));
 
 enum PowerLevel
 {

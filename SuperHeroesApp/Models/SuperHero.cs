@@ -23,7 +23,7 @@ namespace SuperHeroesApp.Models
         {
             get
             { 
-                return $"{Name} - {SecretIdentity}";             
+                return $"{Name} ({SecretIdentity})";             
             }
         }
         public string? SecretIdentity;
