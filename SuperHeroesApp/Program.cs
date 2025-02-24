@@ -2,8 +2,6 @@
 using System.Text;
 using SuperHeroesApp.Models;
 
-Console.WriteLine("Hello, World!");
-
 var canFly = new SuperPower();
 canFly.Name = "Fly";
 canFly.Description = "Ability to glide and fly through the air";
@@ -18,7 +16,7 @@ superStreng.Level = PowerLevel.LevelThree;
 var superman = new SuperHero();
 
 superman.Id = Guid.NewGuid();
-superman.Name = "Superman";
+superman.Name = "Superman       ";
 superman.SecretIdentity = "Clark Kent";
 superman.City = "Metropolis";
 superman.CanFly = true;
@@ -30,20 +28,6 @@ superpowerSuperman.Add(canFly);
 superman.SuperPowers =  superpowerSuperman;
 
 System.Console.WriteLine(superman.UseSuperPowers());
-
-
-class SuperPower
-{
-    public string? Name;
-    public string? Description;
-    public PowerLevel Level;
-
-    public SuperPower()
-    {
-        Level = PowerLevel.LevelOne;
-    }
-
-}
 
 enum PowerLevel
 {
