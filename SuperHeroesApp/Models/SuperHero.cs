@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace SuperHeroesApp.Models
 {
     class SuperHero
