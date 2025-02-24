@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Text;
+using SuperHeroesApp.Models;
 
 Console.WriteLine("Hello, World!");
 
@@ -16,7 +17,7 @@ superStreng.Level = PowerLevel.LevelThree;
 
 var superman = new SuperHero();
 
-//superman.Id = Guid.NewGuid();
+superman.Id = Guid.NewGuid();
 superman.Name = "Superman";
 superman.SecretIdentity = "Clark Kent";
 superman.City = "Metropolis";
@@ -30,32 +31,6 @@ superman.SuperPowers =  superpowerSuperman;
 
 System.Console.WriteLine(superman.UseSuperPowers());
 
-class SuperHero
-{
-    public Guid Id;
-    public string ? Name;
-    public string ? SecretIdentity;
-    public string ? City;
-    public List<SuperPower> ? SuperPowers;
-    public bool CanFly;
-
-    public SuperHero()
-    {
-        Id = Guid.NewGuid();
-        SuperPowers = new List<SuperPower>();
-        CanFly = false;
-    }
-
-    public string UseSuperPowers()
-    {
-        StringBuilder sb = new StringBuilder();
-        foreach (var power in SuperPowers)
-        {
-            sb.AppendLine($"{Name} está usando el super poder {power.Name}!!!");
-        }
-        return sb.ToString();
-    }
-}
 
 class SuperPower
 {
