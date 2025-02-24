@@ -54,5 +54,12 @@ namespace SuperHeroesApp.Models
             return $@"{Id} {Name}";
         }
 
+        //Implementar un metodo de una clase abstracta aplicando polimorfismo
+        public override string SaveTheEarth()
+        {
+            //return base.SaveTheEarth();
+            return $"{NameAndSecretIdentity} ha salvado la tierra\n\b";
+        }
+
     }
 }
